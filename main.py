@@ -1,18 +1,20 @@
 from os.path import join
+import os
+
 
 import matplotlib.pyplot as plt
 
-from util.img_util import readImageFile, saveImageFile
+from util.img_util_example_solution import readImageFile, saveImageFile
 from util.inpaint_util import removeHair
 
-file_path = './data/example.jpg'
-save_dir = './result'
+file_path = r"Assignment-GROUPF/data/example.jpg"
+save_dir = r'Assignment-GROUPF/result'
 
 # read an image file
 img_rgb, img_gray = readImageFile(file_path)
 
 # apply hair removal
-blackhat, thresh, img_out = removeHair(img_rgb, img_gray, kernel_size=5, threshold=10)
+blackhat, thresh, img_out = removeHair(img_rgb, img_gray)
 
 # plot the images
 plt.figure(figsize=(15, 10))
@@ -43,6 +45,10 @@ plt.axis("off")
 
 plt.tight_layout()
 plt.show()
+
+if not os.path.exists(save_dir):
+    os.makedirs(save_dir)  # Create the directory if it doesn't exist
+
 
 # save the output image
 save_file_path = join(save_dir, 'output.jpg')
