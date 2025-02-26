@@ -21,12 +21,17 @@ The annotation for hair presence means:
 
 Image668   
 Before (left) and after (right): (Some hair removed but some still remain)   
+![Unknown-2](https://github.com/user-attachments/assets/b788ab26-a91c-4038-9884-5d2e40e9e87f) ![Unknown-2](https://github.com/user-attachments/assets/fb9a91a5-bdc6-4004-a3a5-3d21e05bbf20)
+
 
 Image671   
 Before(left) and after(right): (more blurry, removing small black hair, but white hair remaining)  
+![Unknown](https://github.com/user-attachments/assets/d38e5e65-fea3-4f08-a073-8511f7ddc4cc) ![Unknown](https://github.com/user-attachments/assets/503da53d-6511-4bba-9f5b-cf07894ff239)
+
 
 Image759   
 Before(left) and after(right): (removes black hair, but small white hair still stays)   
+![Unknown-1](https://github.com/user-attachments/assets/920bd7b6-5624-4489-a271-445e2d3640a0) ![Unknown-1](https://github.com/user-attachments/assets/91292b60-f683-4daa-8ba4-c57a374bcf63)
 
 After running the code, we noticed that in some cases the results were different. The aim was to understand the reason for this, therefore we compared the segmented pictures to the original ones. We have found out that the code did not perform well on images with white hair, as the results were not visible regardless of the amount of hair present. When tested on images with a significant amount of dark hair, the code failed to remove all of it and, in some cases, caused distortions. The best results were achieved when the lesions had only a few dark hairs surrounding them. 
 
