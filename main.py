@@ -12,7 +12,7 @@ SaveImage and ReadImage functions.
 
 
 #Use pandas to load our csv as dataframe
-df = pd.read_csv("result/Hair rating - Images_review.csv")
+df = pd.read_csv("result/result.csv")
 #Save column as a list, so we can loop through the desired pictures in our directory.
 col_array = df["File_ID"].tolist()
 
